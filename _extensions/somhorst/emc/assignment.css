@@ -1,0 +1,21 @@
+.callout-title-container br,
+figure.quarto-float br {
+  display: none;
+}
+
+figure>figcaption.quarto-float-caption-top {
+  margin-top: 0em;
+  color: var(--bs-body-color);
+}
+
+figure {
+  margin: 0em;
+}
+
+div.callout-note.callout-style-default>.callout-header {
+  background-color: rgb(230.8, 240.5, 254.8)
+}
+
+.reveal .slides section div.callout {
+  font-size: 1em !important;
+}

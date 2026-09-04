@@ -1,0 +1,65 @@
+title: EMC Reveal.js
+author: Peter Somhorst
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    revealjs:
+      # --- branding -------------------------------------------------
+      theme: [white, emc-revealjs.scss]
+      logo: logo-emc.png
+      lang: nl
+      date-format: "D MMMM YYYY"
+
+      # --- kruisverwijzingen (nodig voor .question en .box) ---------
+      crossref:
+        custom:
+          - kind: float
+            key: ass
+            reference-prefix: Vraag
+            caption-location: top
+            latex-env: assignment
+          - kind: float
+            key: box
+            reference-prefix: Box
+            caption-location: top
+            latex-env: Info
+
+      # --- filters --------------------------------------------------
+      filters:
+        - assignment.lua
+        - hide-pauses.lua
+        - fullcite.lua
+        - strip-image-height.lua
+
+      # --- deck geometry --------------------------------------------
+      width: 1920
+      height: 1080
+      margin: 0.1
+      center: true
+
+      # --- behaviour ------------------------------------------------
+      incremental: true
+      output-location: fragment
+      transition: none
+      scrollable: true
+      controls: false
+      progress: true
+      slideNumber: true
+      mouseWheel: false
+      previewLinks: true
+      hideAddressBar: true
+
+      # --- contents -------------------------------------------------
+      toc: true
+      toc-depth: 1
+      toc-title: "Op het programma"
+
+      # --- figures --------------------------------------------------
+      fig-width: 6
+      fig-height: 3.5
+      fig-dpi: 300
+
+      # --- output ---------------------------------------------------
+      embed-resources: true
+      format-links: false

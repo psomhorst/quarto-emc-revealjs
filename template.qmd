@@ -1,0 +1,38 @@
+---
+title: Titel van de presentatie
+subtitle: Ondertitel
+author: Peter Somhorst
+date: today
+format: emc-revealjs
+---
+
+## Inleiding
+
+Inhoud van de presentatie
+
+. . .
+
+Elke `. . .` is een pauze: de regel verschijnt pas bij de volgende klik.
+
+## Opsomming
+
+- Lijsten lopen automatisch stap voor stap door,
+- omdat `incremental: true` aanstaat.
+- Zet er `::: {.nonincremental}` omheen om dat per dia uit te zetten.
+
+## Beeldvullende dia
+
+Zet de afbeelding in `media/` en gebruik deze kop:
+
+``` markdown
+## {background-image="media/foto.jpg" background-size="contain" .no-logo}
+```
+
+`contain` past de hele afbeelding passend in het scherm; `cover` vult het
+scherm en snijdt bij. `.no-logo` verbergt het EMC-logo op die ene dia.
+
+::: {.notes}
+Sprekersnotities staan hier; zichtbaar in de presenter view (druk op S).
+:::
+
+## Bedankt voor de aandacht {.no-logo}

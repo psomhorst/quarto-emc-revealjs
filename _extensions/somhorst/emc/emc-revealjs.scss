@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*-- scss:defaults --*/
+
+$presentation-heading-font: Merriweather Sans;
+$font-family-sans-serif: Montserrat;
+$presentation-heading-color: #111F6F;
+$presentation-font-size-root: 44px;
+
+// Tegenhanger van Quarto's $presentation-font-smaller (0.7).
+$presentation-font-larger: 1.3 !default;
+
+/*-- scss:rules --*/
+
+// Logo, bottom-right on every slide.
+.reveal .slide-logo {
+    height: 6rem !important;
+    max-height: unset !important;
+}
+
+// Hide the logo on slides marked {.no-logo}. Quarto's JS moves the logo
+// out of the sections and appends it to .reveal, so it cannot be reached
+// with a descendant selector -- key off the currently-presented slide.
+.reveal:has(section.present.no-logo) .slide-logo {
+    display: none;
+}
+
+// Never distort figures.
+.reveal img {
+    object-fit: contain;
+}
+
+// Inline answer boxes (see the assignment filter).
+input {
+    font-size: 1em;
+    width: 2em;
+    padding: 0 0em;
+    vertical-align: middle;
+}
+
+// Tegenhanger van Quarto's {.smaller}: vergroot de tekst op een dia,
+// maar laat de koppen even groot (net als .smaller die terugdeelt).
+.reveal .slides section.larger {
+    font-size: #{$presentation-font-larger}em;
+
+    h1 { font-size: calc(#{$revealjs-h1-font-size} / #{$presentation-font-larger}); }
+    h2 { font-size: calc(#{$revealjs-h2-font-size} / #{$presentation-font-larger}); }
+    h3 { font-size: calc(#{$revealjs-h3-font-size} / #{$presentation-font-larger}); }
+}
