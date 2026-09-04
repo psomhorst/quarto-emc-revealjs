@@ -16,7 +16,7 @@ Reveal.js-sjabloon voor presentaties in Erasmus MC-huisstijl.
 ## Gebruik
 
 ```bash
-quarto use template somhorst/quarto-emc-revealjs
+quarto use template psomhorst/quarto-emc-revealjs
 ```
 
 Of kopieer lokaal de map `_extensions/` en `template.qmd` naar een nieuwe map.
@@ -336,7 +336,7 @@ $presentation-heading-color: #111F6F;
 $presentation-font-size-root: 44px;
 ```
 
-De deck-instellingen staan in `_extensions/somhorst/emc/_extension.yml`.
+De deck-instellingen staan in `_extensions/psomhorst/emc/_extension.yml`.
 Beide gelden meteen voor elke presentatie die de extensie gebruikt.
 Een losse instelling overschrijven doe je gewoon in de presentatie zelf:
 
